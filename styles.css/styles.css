@@ -1,7 +1,9 @@
 :root {
   --main-font: "Roboto", sans-serif;
   --logo-font: "Raleway", sans-serif;
+
   --accent: #2196f3;
+  --accent-transparent: rgba(33, 150, 243, 0.9);
   --black-text: #212121;
   --grey-text: #757575;
   --black-background: #2f303a;
@@ -11,6 +13,8 @@
   --grey: #eee;
   --social-media-icon: #afb1b8;
   --activity-bcg: rgba(47, 48, 58, 0.8);
+
+  --cubic: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 *,
@@ -108,7 +112,7 @@ img {
 
   transition-property: color;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--cubic);
 }
 
 .active {
@@ -159,7 +163,7 @@ img {
 
   transition-property: color;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--cubic);
 }
 
 .header-contact:hover,
@@ -360,7 +364,7 @@ img {
 
   transition-property: color, background-color;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--cubic);
 }
 
 .social-media-link:hover,
@@ -397,7 +401,7 @@ img {
 
   transition-property: color, border-color;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--cubic);
 }
 
 .client-link:hover,
@@ -485,7 +489,7 @@ img {
 
   transition-property: color;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--cubic);
 }
 
 .first,
@@ -542,7 +546,7 @@ img {
 
   transition-property: color, background-color, box-shadow;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--cubic);
 }
 
 .radio-btn:hover,
@@ -573,7 +577,7 @@ img {
 
   transition-property: box-shadow;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--cubic);
 }
 
 .product-link:hover,
@@ -603,6 +607,36 @@ img {
 
   font-size: 16px;
   line-height: 1.88;
+}
+
+.product-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-link:hover .img-description,
+.product-link:focus .img-description {
+  transform: translateY(-100%);
+}
+
+.img-description {
+  position: absolute;
+  top: 100%;
+
+  width: 100%;
+  height: 100%;
+
+  padding: 63px 24px;
+
+  font-size: 18px;
+  line-height: 1.56;
+
+  background-color: var(--accent-transparent);
+  color: var(--white);
+
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: var(--cubic);
 }
 
 /* icons */
