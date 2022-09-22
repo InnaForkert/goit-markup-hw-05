@@ -60,7 +60,9 @@
           Ефективні рішення для <br />
           вашого бізнесу
         </h1>
-        <button class="primary-btn" type="button">Замовити послугу</button>
+        <button class="primary-btn" type="button" data-modal-open>
+          Замовити послугу
+        </button>
       </section>
       <section class="section features">
         <div class="container">
@@ -454,6 +456,15 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="close btn" data-modal-close>
+          <svg class="icon close">
+            <use href="./images/icons.svg#close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
     <script src="./modal.js"></script>
   </body>
 </html>
