@@ -711,14 +711,13 @@ img {
 .is-hidden {
   opacity: 0;
   pointer-events: none;
-  visibility: hidden;
 }
 
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%);
 
   width: 528px;
   height: 581px;
@@ -730,11 +729,11 @@ img {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   opacity: 1;
 
-  transition: transform 250ms var(--cubic), opacity 250ms var(--cubic);
+  transition: opacity 250ms var(--cubic);
 }
 
 .backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(1.1);
+  transform: translate(-50%, -50%);
   opacity: 0;
 }
 
